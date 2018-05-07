@@ -59,5 +59,19 @@ class FirefoxBookmarksDeduplicatorTestSuite(unittest.TestCase):
         self.assertEqual(bookmarks[0].get("title"), "Mozilla Firefox")
         self.assertEqual(len(bookmarks[0].get("children")), 2)
 
+    def test_merge_empty_bookmarks_source(self):
+        bookmarks_object = file_operations.load_bookmarks_file("tests/empty_testcase.json")
+        bookmarks = fetch.get_bookmarks_from_menu(bookmarks_object)
+        
+        deduplicator_utils.directory_merge(bookmarks)
+        self.assertEqual(len(bookmarks), 0)
+
+    def test_merge_empty_bookmarks_folders(self):
+        bookmarks_object = file_operations.load_bookmarks_file("tests/empty_testcase.json")
+        bookmarks = fetch.get_bookmarks_from_toolbar(bookmarks_object)
+        
+        deduplicator_utils.directory_merge(bookmarks)
+        self.assertEqual(len(bookmarks), 1)
+    
 if __name__ == '__main__':
     unittest.main() 

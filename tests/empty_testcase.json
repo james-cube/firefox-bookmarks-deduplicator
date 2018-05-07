@@ -1,0 +1,38 @@
+{
+  "guid": "root________",
+  "title": "",
+  "type": "text/x-moz-place-container",
+  "root": "placesRoot",
+  "children": [
+    {
+      "guid": "menu________",
+      "title": "Bookmarks Menu",
+      "type": "text/x-moz-place-container",
+      "root": "bookmarksMenuFolder"
+    },
+    {
+      "guid": "toolbar_____",
+      "title": "Bookmarks Toolbar",
+      "type": "text/x-moz-place-container",
+      "root": "toolbarFolder",
+      "children": [
+        {
+          "title": "test",
+          "type": "text/x-moz-place-container",
+          "children": [
+            {
+              "title": "test2",
+              "type": "text/x-moz-place-container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "unfiled_____",
+      "title": "Other Bookmarks",
+      "type": "text/x-moz-place-container",
+      "root": "unfiledBookmarksFolder"
+    }
+  ]
+} 

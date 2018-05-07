@@ -15,7 +15,7 @@ In top menu `Bookmarks` under `Show All Bookmarks` there is button `Import and B
 
 ### How to use the tool?
 
-`python firefox_bookmarks_merger --file bookmarks-20XX-XX-XX.json --output cleaned.json`
+`python firefox_bookmarks_deduplicator --file bookmarks-20XX-XX-XX.json --output cleaned.json`
 
 ### All program arguments
 
