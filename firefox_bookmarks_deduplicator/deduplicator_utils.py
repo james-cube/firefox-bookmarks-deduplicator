@@ -47,7 +47,7 @@ def directory_merge(bookmarks):
                     if merge_id != current_id:
                         print("Merging id " + str(merge_id) + " into " + str(current_id))
                         for child in dir_to_merge.get("children"):
-                            directory.get("children").append(child)
+                            directory.get("children", []).append(child)
                         dir_to_merge["children"] = []
                         remove_from_tree(bookmarks, merge_id)
                 break
